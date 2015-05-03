@@ -28,6 +28,6 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  minitest
+  minitest (~> 5.6)
   pry
   rubocop

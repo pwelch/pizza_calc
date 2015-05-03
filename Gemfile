@@ -2,11 +2,10 @@
 
 source 'https://rubygems.org'
 
-group :test do
-  gem 'rubocop'
-  gem 'minitest'
-end
+ruby '2.2.2'
 
-group :development do
+group :test do
+  gem 'minitest', '~> 5.6'
+  gem 'rubocop'
   gem 'pry'
 end
