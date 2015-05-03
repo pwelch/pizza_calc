@@ -1,0 +1,18 @@
+<h2>Find How Many Pizzas To Order:</h2>
+
+<div class="well">
+  <form action="/pizza_calc" method="post">
+    <div class="form-group">
+      <label for="people">Number of People</label>
+      <input id="people" class="form-control" type="text" name="people" placeholder="0" style="width: 10%"></input>
+      <br/>
+      <button type="submit" class="btn btn-success" id="pizza-calc-button">Calculate</button>
+    </div>
+  </form>
+</div>
+
+<% if @pizza_count %>
+<div class="alert alert-info" role="alert">
+  <h3>Order <%= @pizza_count %> <%= pluralize(@pizza_count).capitalize %></h3>
+</div>
+<% end%>

@@ -4,8 +4,11 @@ source 'https://rubygems.org'
 
 ruby '2.2.2'
 
+gem 'sinatra'
+
 group :test do
-  gem 'minitest', '~> 5.6'
+  gem 'minitest'
+  gem 'rack-test'
   gem 'rubocop'
   gem 'pry'
 end
