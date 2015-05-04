@@ -2,9 +2,15 @@
 
 Util for calculating pizza requirements.
 
+## API
+
+```bash
+  curl -X POST http://localhost:9292/api/pizza_calc/3
+```
+
 ## Development
 
-`rake`
+`bundle exec rake`
 
 ## Running Locally
 

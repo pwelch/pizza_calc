@@ -26,4 +26,10 @@ class AppTest < MiniTest::Unit::TestCase
     assert last_response.ok?
     assert last_response.body.include? 'Order 2 Pizzas'
   end
+
+  def test_api_pizza_calc_post
+    post '/api/pizza_calc/8'
+    assert last_response.ok?
+    assert last_response.body == '{"amount_to_order":3}'
+  end
 end

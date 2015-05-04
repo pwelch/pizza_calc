@@ -1,9 +1,11 @@
 require 'sinatra'
+require 'json'
 require './helpers/pluralize'
 require './lib/pizza_calc'
 
 class App < Sinatra::Base
   set :logging, true
+  set :server, :puma
 
   helpers ApplicationHelper
 
@@ -18,5 +20,12 @@ class App < Sinatra::Base
   post '/pizza_calc' do
     @pizza_count = PizzaCalc.new(params[:people]).amount
     erb :index, :locals => { :pizza_count => @pizza_count }
+  end
+
+  ## API
+  post '/api/pizza_calc/:people' do
+    content_type :json
+    @pizza_count = PizzaCalc.new(params[:people]).amount
+    { :amount_to_order => @pizza_count }.to_json
   end
 end
