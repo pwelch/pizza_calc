@@ -18,7 +18,7 @@ class AppTest < MiniTest::Unit::TestCase
 
   def test_pizza_calc_text
     get '/'
-    assert last_response.body.include? 'Find How Many Pizzas To Order:'
+    assert last_response.body.include? 'Find How Many Pizzas To Order'
   end
 
   def test_pizza_calc_post

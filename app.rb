@@ -9,6 +9,7 @@ class App < Sinatra::Base
 
   helpers ApplicationHelper
 
+  ## UI
   get '/' do
     erb :index
   end
@@ -20,6 +21,10 @@ class App < Sinatra::Base
   post '/pizza_calc' do
     @pizza_count = PizzaCalc.new(params[:people]).amount
     erb :index, :locals => { :pizza_count => @pizza_count }
+  end
+
+  get '/api' do
+    erb :api
   end
 
   ## API
