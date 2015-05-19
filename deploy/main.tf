@@ -11,14 +11,14 @@ resource "heroku_app" "web" {
   stack   = "cedar-14"
 
   config_vars {
-    ERROR_PAGE_URL = "http://www.pizzacalc.us/404.html"
+    ERROR_PAGE_URL = "http://pizzacalc.website/404.html"
   }
 }
 
 # Associate domain
 resource "heroku_domain" "web" {
   app      = "${heroku_app.web.name}"
-  hostname = "www.pizzacalc.us"
+  hostname = "pizzacalc.website"
 }
 
 # Papertrail Addon

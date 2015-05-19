@@ -1,20 +1,28 @@
 # PizzaCalc
 
-Util for calculating pizza requirements.
+Util for calculating pizza order requirements.
 
 ## API
 
 ```bash
-  curl -X POST http://localhost:9292/api/pizza_calc/3
+  curl -X POST http://pizzacalc.website/api/pizza_calc/3
 ```
-
-## Development
-
-`bundle exec rake`
 
 ## Running Locally
 
+Start Sinatra App
 `rackup`
+
+Visit
+`http://localhost:9292`
+
+## Development
+
+Run All Tests:
+`bundle exec rake`
+
+Local API:
+`curl -X POST http://localhost:9292/api/pizza_calc/3`
 
 ## Contributing
 
