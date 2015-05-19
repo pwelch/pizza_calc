@@ -33,4 +33,9 @@ class App < Sinatra::Base
     @pizza_count = PizzaCalc.new(params[:people]).amount
     { :amount_to_order => @pizza_count }.to_json
   end
+
+  ## Errors
+  not_found do
+    erb "<img src=\"assets/images/tb_sign1.png\"/>"
+  end
 end
