@@ -1,0 +1,3 @@
+# Ignore TerraForm State Files for Public Repo
+terraform.tfstate
+terraform.tfstate.backup
