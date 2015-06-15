@@ -8,6 +8,7 @@ gem 'sinatra'
 gem 'puma'
 
 group :test do
+  gem 'rake'
   gem 'minitest'
   gem 'rack-test'
   gem 'rubocop'

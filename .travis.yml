@@ -7,7 +7,8 @@ cache: bundler
 language: ruby
 rvm:
   - 2.2.2
-before_install: gem update --remote bundler
+before_install:
+  - gem update --remote bundler
 install:
   - bundle install --retry=3
 script:
