@@ -4,7 +4,7 @@ require 'rack/test'
 require_relative 'test_helper'
 require_relative '../app'
 
-class AppTest < MiniTest::Unit::TestCase
+class AppTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
