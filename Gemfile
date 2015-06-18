@@ -13,4 +13,5 @@ group :test do
   gem 'rack-test'
   gem 'rubocop'
   gem 'pry'
+  gem 'bundler-audit', :require => false
 end
