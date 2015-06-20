@@ -11,4 +11,16 @@ end
 
 RuboCop::RakeTask.new
 
+namespace :security do
+  desc 'Run bundler-audit'
+  task :bundle_audit do
+    sh 'bundle exec bundle-audit'
+  end
+
+  desc 'Update bundler-audit ruby-advisory-db'
+  task :bundle_audit_update do
+    sh 'bundle exec bundle-audit update'
+  end
+end
+
 task :default => [:test, :rubocop]
