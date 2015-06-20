@@ -1,6 +1,7 @@
 ENV['RACK_ENV'] = 'test'
 
 require 'rack/test'
+require 'json'
 require_relative 'test_helper'
 require_relative '../app'
 
@@ -31,5 +32,12 @@ class AppTest < Minitest::Test
     post '/api/pizza_calc/8'
     assert last_response.ok?
     assert last_response.body == '{"amount_to_order":3}'
+  end
+
+  def test_api_status_get
+    get '/api/status'
+    json_response = JSON.parse(last_response.body)
+    assert last_response.ok?
+    assert json_response['status'] == 'OK'
   end
 end
