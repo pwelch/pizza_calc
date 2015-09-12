@@ -45,6 +45,11 @@ class App < Sinatra::Base
     { 'status' => 'OK', 'last_updated' => Time.now.utc }.to_json
   end
 
+  get '/api/*' do
+    content_type :json
+    { :status => 'ERROR', :message => 'Not Found' }.to_json
+  end
+
   ## Errors
   not_found do
     erb "<img src=\"assets/images/tb_sign1.png\"/>"
