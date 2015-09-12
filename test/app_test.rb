@@ -46,4 +46,10 @@ class AppTest < Minitest::Test
     assert last_response.ok?
     assert json_response['status'] == 'OK'
   end
+
+  def test_api_not_found
+    get '/api/not_implemented'
+    assert last_response.ok?
+    assert last_response.body == '{"status":"ERROR","message":"Not Found"}'
+  end
 end
