@@ -34,6 +34,12 @@ class App < Sinatra::Base
     { :amount_to_order => @pizza_count }.to_json
   end
 
+  get '/api/pizza_calc/:people' do
+    content_type :json
+    @pizza_count = PizzaCalc.new(params[:people]).amount
+    { :amount_to_order => @pizza_count }.to_json
+  end
+
   get '/api/status' do
     content_type :json
     { 'status' => 'OK', 'last_updated' => Time.now.utc }.to_json

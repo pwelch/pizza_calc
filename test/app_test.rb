@@ -34,6 +34,12 @@ class AppTest < Minitest::Test
     assert last_response.body == '{"amount_to_order":3}'
   end
 
+  def test_api_pizza_calc_get
+    get '/api/pizza_calc/8'
+    assert last_response.ok?
+    assert last_response.body == '{"amount_to_order":3}'
+  end
+
   def test_api_status_get
     get '/api/status'
     json_response = JSON.parse(last_response.body)
