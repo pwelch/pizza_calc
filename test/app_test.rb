@@ -23,7 +23,7 @@ class AppTest < Minitest::Test
   end
 
   def test_pizza_calc_post
-    post '/pizza_calc', { :people => 3 }
+    post '/pizza_calc', { people: 3 }
     assert last_response.ok?
     assert last_response.body.include? 'Order 2 Pizzas'
   end

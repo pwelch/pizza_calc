@@ -11,7 +11,7 @@ Util for calculating pizza order requirements.
 ## Running Locally
 
 Start Sinatra App
-`rackup`
+`rackup` or `bundle exec foreman start`
 
 Visit
 `http://localhost:9292`

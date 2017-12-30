@@ -1,17 +1,17 @@
-# encoding: utf-8
-
 source 'https://rubygems.org'
 
-ruby '2.3.1'
+ruby '2.5.0'
 
-gem 'sinatra'
+gem 'foreman'
 gem 'puma'
+gem 'sinatra'
+gem 'sinatra-contrib'
 
 group :test do
-  gem 'rake'
+  gem 'bundler-audit', require: false
   gem 'minitest'
-  gem 'rack-test'
-  gem 'rubocop'
   gem 'pry'
-  gem 'bundler-audit', :require => false
+  gem 'rack-test'
+  gem 'rake'
+  gem 'rubocop'
 end

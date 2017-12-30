@@ -1,4 +1,4 @@
-# encoding: utf-8
+
 require 'rake/testtask'
 require 'rubocop/rake_task'
 
@@ -30,4 +30,4 @@ namespace :ci do
   end
 end
 
-task :default => [:test, :rubocop]
+task default: %i[test rubocop]
