@@ -1,4 +1,4 @@
-# encoding: utf-8
+
 class PizzaCalc
   attr_reader :amount, :people
 

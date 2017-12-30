@@ -1,4 +1,4 @@
-# encoding: utf-8
+
 require_relative 'test_helper'
 require_relative '../lib/pizza_calc'
 
