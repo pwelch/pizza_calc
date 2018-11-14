@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 
-ruby '2.5.0'
+ruby '~> 2.5.3'
 
-gem 'foreman'
-gem 'puma'
-gem 'sinatra'
-gem 'sinatra-contrib'
+gem 'foreman', '~> 0.85.0'
+gem 'puma', '~> 3.12.0'
+gem 'sinatra', '>= 2.0.4'
+gem 'sinatra-contrib', '>= 2.0.4'
 
 group :test do
   gem 'bundler-audit', require: false

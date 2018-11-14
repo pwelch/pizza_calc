@@ -1,12 +1,15 @@
+# frozen_string_literal: true
+
 require 'sinatra/base'
 require 'sinatra/custom_logger'
 require 'logger'
 require 'json'
 require './helpers/pluralize'
 require './lib/pizza_calc'
-require_relative 'version'
 
 class App < Sinatra::Base
+  VERSION = '0.1.6'
+
   helpers ApplicationHelper
   helpers Sinatra::CustomLogger
 
@@ -51,9 +54,9 @@ class App < Sinatra::Base
   get '/api/status' do
     content_type :json
     {
-      'status'       => 'OK',
+      'status' => 'OK',
       'last_updated' => Time.now.utc,
-      'version'      => Application::VERSION
+      'version' => App::VERSION
     }.to_json
   end
 
