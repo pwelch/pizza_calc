@@ -1,3 +1,4 @@
+# frozen_string_literal: true
 
 class PizzaCalc
   attr_reader :amount, :people
