@@ -17,7 +17,7 @@ GEM
       thor (~> 0.19.1)
     i18n (1.1.1)
       concurrent-ruby (~> 1.0)
-    jaro_winkler (1.5.1-x86_64-darwin-17)
+    jaro_winkler (1.5.1)
     method_source (0.9.2)
     minitest (5.11.3)
     multi_json (1.13.1)
@@ -29,7 +29,7 @@ GEM
     pry (0.12.2)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
-    puma (3.12.0)
+    puma (3.12.2)
     rack (2.0.6)
     rack-protection (2.0.4)
       rack
@@ -74,7 +74,7 @@ DEPENDENCIES
   foreman (~> 0.85.0)
   minitest
   pry
-  puma (~> 3.12.0)
+  puma (~> 3.12.2)
   rack-test
   rake
   rubocop
