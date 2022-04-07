@@ -24,11 +24,4 @@ namespace :security do
   end
 end
 
-namespace :ci do
-  desc 'Run Travis-CI Config Lint'
-  task :lint do
-    sh 'travis lint'
-  end
-end
-
 task default: %i[test rubocop]

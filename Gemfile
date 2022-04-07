@@ -2,12 +2,12 @@
 
 source 'https://rubygems.org'
 
-ruby '~> 2.5.3'
+ruby '~> 2.7.5'
 
-gem 'foreman', '~> 0.85.0'
-gem 'puma', '~> 4.3.12'
-gem 'sinatra', '>= 2.0.4'
-gem 'sinatra-contrib', '>= 2.0.4'
+gem 'foreman', '~> 0.87'
+gem 'puma', '~> 5.6'
+gem 'sinatra', '~> 2.2'
+gem 'sinatra-contrib', '~> 2.2'
 
 group :test do
   gem 'bundler-audit', require: false
@@ -16,4 +16,6 @@ group :test do
   gem 'rack-test'
   gem 'rake'
   gem 'rubocop'
+  gem 'rubocop-minitest'
+  gem 'rubocop-rake'
 end

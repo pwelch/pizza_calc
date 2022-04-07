@@ -16,7 +16,7 @@ class App < Sinatra::Base
   configure :development, :production do
     set :server, :puma
     set :logging, true
-    set :logger, Logger.new(STDOUT)
+    set :logger, Logger.new($stdout)
     logger.level = Logger::DEBUG if development?
   end
 
