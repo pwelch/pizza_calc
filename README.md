@@ -24,10 +24,6 @@ Run All Tests:
 Local API:
 `curl -X POST http://localhost:9292/api/pizza_calc/3`
 
-## CI
-
-[![Build Status](https://secure.travis-ci.org/pwelch/pizza_calc.svg)](http://travis-ci.org/pwelch/pizza_calc)
-
 ## Contributing
 
 1. Fork it ( https://github.com/pwelch/pizza_calc/fork )

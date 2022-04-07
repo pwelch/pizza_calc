@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-ruby '~> 2.7.5'
+ruby '~> 2.7'
 
 gem 'foreman', '~> 0.87'
 gem 'puma', '~> 5.6'
